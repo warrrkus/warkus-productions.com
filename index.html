@@ -1,114 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-        <head>
-                <meta charset="utf-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <meta name="description" content="Solo game developer, making games">
-                <meta name="keywords" content="Warkus, Gamedev, Harvest Festival 64, Oceanwork, Haunted PS1, games, retro, horror, indie">
-                <meta name="author" content="Warkus">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Solo game developer, making games">
+		<meta name="keywords" content="Warkus, Gamedev, Harvest Festival 64, Oceanwork, Haunted PS1, games, retro, horror, indie">
+		<meta name="author" content="Warkus">
 
-                <title>Warkus</title>
+		<title>Warkus</title>
 
-                <link rel="icon" href="warkus_32.png">
+		<link rel="icon" href="warkus_32.png">
 
-                <style>
-                        html, body {
-                                background-color: #000;
-                        }
+		<style>
+						html, body {
+							height:100%;
+							padding:0;
+							margin:0;
+						}
+						
+						* {
+							font-family: serif;
+						}
 
-                        * {
-                            font-family: serif;
-                        }
+						#main-container {
+							display: flex;
+							flex-direction: row;
+							height:100%;
+						}
 
-                        #main-container {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-                                margin-bottom: 50px;
-                        }
+						#content-left {
 
-                        #logo {
-                                display: flex;
-                                justify-content: center;
-                        }
+							background: rgb(0,0,0);
+							//background: linear-gradient(90deg, rgba(82,0,0,1) 0%, rgba(0,0,0,1) 100%);
 
-                        #logo img {
-                                width:100%;
-                                height:400px;
-                        }
+							height:100%-15px;
+							width:300px;
+							padding:15px;
+							border-radius:0%;
+
+							display: flex;
+							flex-direction:column;
+							align-items: center;
+							justify-content: space-evenly;
+
+						}
+
+						#content-right {
+							background: rgb(0,0,0);
+							//background: linear-gradient(90deg, rgba(0,0,0,1) 90%, rgba(82,0,0,1) 100%);
+							height:100%;
+							flex: 1;
+
+							display:flex;
+							flex-direction:column;
+							align-items:center;
+
+							overflow-y: scroll;
+						}
+
+						#content-right > * {
+							border-radius:2%;
+							margin: 10px;
+							margin-bottom: 20px;
+						}
+
+						#content-right img {
+							image-rendering: auto;
+							image-rendering: crisp-edges;
+							image-rendering: pixelated;
+							max-width: 50vw;
+							min-width: 50vw;
+						}
+
+						#logo {
+							display: flex;
+							justify-content: center;
+						}
+
+						#logo-wrapper {
+							background:#000;
+							padding:30px;
+							border-radius:50%;
+						}
+
+						#logo img {
+							width:100%;
+							height:120px;
+							background:#000;
+						}
 
 
-                        #content-about p {
-                                color: #ccc;
-                                font-size: 20pt;
-                                text-align:center;
-                                margin: 0;
-                                margin-top: 25px;
-                        }
+						#content-about p {
+							color: #ccc;
+							font-size: 20pt;
+							text-align:center;
+							margin: 0;
+							margin-top: 25px;
+						}
 
-                        #content-links {
-                                max-width: 512px;
-                                text-align: center;
-                        }
+						#content-links {
+							text-align: center;
+						}
 
-                        #content-links ul {
-                                margin: 0;
-                                padding: 0;
-                        }
+						#content-links ul {
+							margin: 0;
+							padding: 0;
+						}
 
-                        #content-links li {
-                                list-style-type: none;
-                                font-size: 24pt;
-                                display: block;
-                                padding-top: 25px;
-                        }
+						#content-links li {
+							list-style-type: none;
+							font-size: 24pt;
+							display: block;
+							padding-top: 25px;
+						}
 
-                        #content-links li:first-child {
-                            padding-top: 15px;
-                        }
+						#content-links li:first-child {
+							padding-top: 15px;
+						}
 
-                        a {
-                                color: #ccc;
-                                font-weight: bold;
-                                font-size: 20pt;
-                        }
+						a {
+							color: #ccc;
+							font-weight: bold;
+							font-size: 20pt;
+						}
 
-                        a:hover {
-                                color: #9c292b;
-                        }
-                </style>
-        </head>
-        <body>
-                <div id="main-container">
-                        <div id="logo">
-                                <img src="./warkus_logo.png" alt="Warkus Logo">
-                        </div>
-                        <div id="content-about">
-                                <p>Solo developer, conjuring games and other works.</p>
-                        </div>
-                        <div id="content-links">
-                                <ul>
-                                        <li>
-                                                <a href="https://store.steampowered.com/search/?developer=Warkus">Steam</a>
-                                        </li>
-                                        <li>
-                                                <a href="https://warrrkus.itch.io/">Itch.io</a>
-                                        </li>
-                                        <li>
-                                                <a href="https://twitter.com/warrrkus">Twitter</a>
-                                        </li>
-                                        <li>
-                                                <a href="https://www.youtube.com/@Warrrkus">Youtube</a>
-                                        </li>
-                                        <li>
-                                                <a href="https://warkus.tumblr.com">Tumblr</a>
-                                        </li>
-                                        <li>
-                                                <a href="mailto:warkus@protonmail.com">Email</a>
-                                        </li>
-                                </ul>
-                        </div>
-                </div>
-        </body>
+						a:hover {
+							color: #f7ff00!important;
+						}
+
+						@media only screen and (max-width: 1023px) {
+								#main-container {
+  								 flex-direction: column; 
+  								}
+
+								#content-left {
+									width:100%;
+									border:none;
+									padding:0;
+									padding-top: 10px;
+									padding-bottom: 50px;
+									height:auto;
+									background: #000;
+								}
+
+								#content-right {
+									height: auto;
+									width:100%;
+									overflow-y: unset;
+
+									background: #000;
+								}
+
+
+								#content-right img {
+									max-width: 90vw;
+								}
+						}
+		</style>
+	</head>
+	<body>
+		<div id="main-container">
+			<div id="content-left">
+				<div id="logo">
+					<div id="logo-wrapper">
+						<img src="./warkus_logo.png" alt="Warkus Logo">
+					</div>
+				</div>
+				<div id="content-about">
+					<p>Solo developer, conjuring games and other works.</p>
+				</div>
+				<div id="content-links">
+					<ul>
+						<li>
+							<a href="https://store.steampowered.com/search/?developer=Warkus">Steam</a>
+						</li>
+						<li>
+							<a href="https://warrrkus.itch.io/">Itch.io</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/warrrkus">Twitter</a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/@Warrrkus">Youtube</a>
+						</li>
+						<li>
+							<a href="https://warkus.tumblr.com">Tumblr</a>
+						</li>
+						<li>
+							<a href="mailto:warkus@protonmail.com">Email</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="content-right">
+
+						<img src="./images/hon1.png" alt="House of Necrosis 1">
+						<img src="./images/hon2.png" alt="House of Necrosis 2">
+						<img src="./images/chalice3.png" alt="Chalicebound 1">
+						<img src="./images/chalice2.png" alt="Chalicebound 2">
+						<img src="./images/chalice1.png" alt="Chalicebound 3">
+						<img src="./images/lotbs1.png" alt="Legend of the Blue Sword 1">
+						<img src="./images/lotbs2.png" alt="Legend of the Blue Sword 2">
+						<img src="./images/lotbs3.png" alt="Legend of the Blue Sword 3">
+						<img src="./images/hf1.gif" alt="Harvest Festival 64 1">
+						<img src="./images/hf2.png" alt="Harvest Festival 64 2">
+						<img src="./images/hf3.png" alt="Harvest Festival 64 3">
+						<img src="./images/hf4.png" alt="Harvest Festival 64 4">
+						<img src="./images/sr1.png" alt="Spiritrest 1">
+						<img src="./images/sr2.png" alt="Spiritrest 2">
+						<img src="./images/sr3.png" alt="Spiritrest 3">
+						<img src="./images/sg1.png" alt="Stargazing 64 1">
+						<img src="./images/sg2.png" alt="Stargazing 64 2">
+						<img src="./images/sg3.png" alt="Stargazing 64 3">
+						<img src="./images/sg4.png" alt="Stargazing 64 4">
+						<img src="./images/son1.gif" alt="Shadow over Normoth 1">
+						<img src="./images/son2.png" alt="Shadow over Normoth 2">
+						<img src="./images/son3.png" alt="Shadow over Normoth 3">
+						<img src="./images/oceanwork2.gif" alt="Oceanwork 2">
+						<img src="./images/oceanwork1.gif" alt="Oceanwork 1">
+						<img src="./images/oceanwork3.png" alt="Oceanwork 3">
+			</div>
+
+
+		</div>
+	</body>
 </html>
