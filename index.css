@@ -198,3 +198,14 @@ html, body {
 	height: 25vh;
 	padding:10px;
 }
+
+@media only screen and (max-width: 1200px) {
+	.split {
+		flex-direction: column;
+	}
+
+	#presskit .imagebox img {
+		height: auto;
+		width: 80vw;
+	}
+}
